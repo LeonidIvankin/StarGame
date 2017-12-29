@@ -1,0 +1,29 @@
+package ru.geekbrains.engine.font;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
+
+/**
+ * Created by admin on 28.12.2017.
+ */
+
+public class Font extends BitmapFont {
+	public Font(String fontFile, String imageFile) {
+		super(Gdx.files.internal(fontFile), Gdx.files.internal(imageFile), false, false);
+		//применение фильтров в текстуре
+		getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+
+	}
+
+	//вставляет размер шрифтов
+	public void setWorldSize(float worldSize) {
+		getData().setScale(worldSize / getCapHeight());//уменьшение - увеличение шрифта
+	}
+
+	public GlyphLayout draw(Batch batch, CharSequence str, float x, float y, int halgin){//выравнивание текста по центру
+		return super.draw(batch, str, x, y, 0f, halgin, false);
+	}
+}
