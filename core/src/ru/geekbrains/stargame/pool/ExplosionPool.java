@@ -25,7 +25,7 @@ public class ExplosionPool extends SpritesPool<Explosion>{
 
 	@Override
 	protected void debugLog() {
-		System.out.println("Explosion pool chahge active/free: " + activeObjects.size() + " / " + freeObjects.size());
+		//System.out.println("Explosion pool chahge active/free: " + activeObjects.size() + " / " + freeObjects.size());
 	}
 
 }

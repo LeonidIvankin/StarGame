@@ -26,6 +26,6 @@ public class EnemyPool extends SpritesPool<Enemy>{
 
 	@Override
 	protected void debugLog() {
-		System.out.println("EnemyPool change active/free: " + activeObjects.size() + " / " + freeObjects.size());
+		//System.out.println("EnemyPool change active/free: " + activeObjects.size() + " / " + freeObjects.size());
 	}
 }

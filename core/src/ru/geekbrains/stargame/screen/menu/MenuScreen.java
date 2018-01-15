@@ -110,14 +110,14 @@ public class MenuScreen extends Base2DScreen implements ActionListener{
 	public void touchDown(Vector2 touch, int pointer) {
 		buttonExit.touchDown(touch, pointer);//событие на кнопку
 		buttonNewGame.touchDown(touch, pointer);
-		System.out.println("touchDown " + touch.x + " " + touch.y);
+		//System.out.println("touchDown " + touch.x + " " + touch.y);
 	}
 
 	@Override
 	public void touchUp(Vector2 touch, int pointer) {
 		buttonExit.touchUp(touch, pointer);//событие на кнопку
 		buttonNewGame.touchUp(touch, pointer);
-		System.out.println("touchUp " + touch.x + " " + touch.y);
+		//System.out.println("touchUp " + touch.x + " " + touch.y);
 	}
 
 	@Override

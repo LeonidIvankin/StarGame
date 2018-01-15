@@ -45,7 +45,7 @@ public class Base2DScreen implements Screen, InputProcessor{
 
 	@Override
 	public void show() {//инициализация всех граф объектов
-		System.out.println("show");
+		//System.out.println("show");
 		Gdx.input.setInputProcessor(this);//установили inputProcessor, отлавливаем события; без строчки не будут отлавливаться события мыши
 	}
 
@@ -56,7 +56,7 @@ public class Base2DScreen implements Screen, InputProcessor{
 
 	@Override
 	public void resize(int width, int height) {//изм размера экрана
-		System.out.println("resize" + width + " " + height);
+		//System.out.println("resize" + width + " " + height);
 		screenBounds.setSize(width, height);
 		screenBounds.setLeft(0);
 		screenBounds.setBottom(0);
@@ -76,42 +76,42 @@ public class Base2DScreen implements Screen, InputProcessor{
 
 	@Override
 	public void pause() {//при остановке; из поля видимости
-		System.out.println("pause");
+		//System.out.println("pause");
 	}
 
 	@Override
 	public void resume() {//появляется в поле видимости
-		System.out.println("resume");
+		//System.out.println("resume");
 	}
 
 	@Override
 	public void hide() {//скрывает полностью
-		System.out.println("hide");
+		//System.out.println("hide");
 		dispose();//как только скрываем уходит из памяти
 	}
 
 	@Override
 	public void dispose() {//когда уничтожается
-		System.out.println("dispose");
+		//System.out.println("dispose");
 		batch.dispose();
 
 	}
 
 	@Override
 	public boolean keyDown(int keycode) {//нажали клавишу
-		System.out.println("keyDown" + keycode);
+		//System.out.println("keyDown" + keycode);
 		return false;
 	}
 
 	@Override
 	public boolean keyUp(int keycode) {//отпустили клавишу
-		System.out.println("keyUp" + keycode);
+		//System.out.println("keyUp" + keycode);
 		return false;
 	}
 
 	@Override
 	public boolean keyTyped(char character) {
-		System.out.println("keyTyped" + character);
+		//System.out.println("keyTyped" + character);
 		return false;
 	}
 
